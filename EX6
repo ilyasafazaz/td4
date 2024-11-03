@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class Point {
+private:
+    float x, y;
+
+public:
+    Point(float x, float y) : x(x), y(y) {}
+
+    void deplace(float dx, float dy) {
+        x += dx;
+        y += dy;
+    }
+
+    void affiche() const {
+        cout << "Point(" << x << ", " << y << ")" << endl;
+    }
+};
+
+int main() {
+    Point p(2.5, 3.5);
+
+    p.affiche();
+    p.deplace(1.0, -0.5);
+    p.affiche();
+
+    return 0;
+}
